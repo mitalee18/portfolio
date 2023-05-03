@@ -1,58 +1,260 @@
 <!DOCTYPE html>
-<html>
-<style>
-body, html {
-  height: 100%;
-  margin: 0;
-}
-
-.bgimg {
-  background-image: url('image_1.jpg');
-  height: 100%;
-  background-position: center;
-  background-size: cover;
-  position: relative;
-  color: white;
-  font-family: "Courier New", Courier, monospace;
-  font-size: 25px;
-}
-
-.topleft {
-  position: absolute;
-  top: 0;
-  left: 16px;
-}
-
-.bottomleft {
-  position: absolute;
-  bottom: 0;
-  left: 16px;
-}
-
-.middle {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  text-align: center;
-}
-
-hr {
-  margin: auto;
-  width: 40%;
-}
-</style>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Mitalee Minde - Personal Protfolio</title>
+  <script src="https://kit.fontawesome.com/e67dc7ee82.js" crossorigin="anonymous"></script>
+</head>
 <body>
-
-<div class="bgimg">
-  <div class="topleft">
-    <p>Logo</p>
+  <div id="header">
+    <div class="container">
+      <nav>
+        <img src="images/logo.png" class="logo">
+        <ul id="sidemenu">
+          <li><a href="#header">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#experiences">Experiences</a></li>
+          <li><a href="#portfolio">Projects</a></li>
+          <li><a href="#contact">Contact</a></li>
+          <i class="fa-solid fa-circle-xmark" onclick="closeMenu()"></i>
+        </ul>
+        <i class="fa-solid fa-bars" onclick="openMenu()"></i>
+      </nav>
+      <div class="header-text">
+        <h1>Hi, I'm <span>Mitalee Minde</span></h1>
+        <p>Software Engineer</p>
+      </div>
+    </div>
   </div>
-  <div class="middle">
-    <h1>COMING SOON</h1>
-    <hr>
-  </div>
-</div>
+  <!-- About section -->
+  <div id="about">
+    <div class="container">
+      <div class="row">
+        <div class="about-col-1">
+          <img src="images/about.png" alt="me">
+        </div>
+        <div class="about-col-2">
+          <h1 class="subtitle">About Me</h1>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
 
+          <div class="titles">
+            <p class="tab-links activelink" onclick="opentab('skills')">Skills</p>
+            <p class="tab-links" onclick="opentab('experience')">Experience</p>
+            <p class="tab-links" onclick="opentab('education')">Education</p>
+          </div>
+          <div class="contents activetab" id="skills">
+            <ul>
+              <li><span>Languages/Web Technologies:</span><br>Designing APIs, creating distributed systems, working on huge in-flow of data</li>
+              <li><span>Machine Learning Tools/Libraries:</span><br> Numpy, MatplotLib, Pandas, Sklearn, Seaborn</li>
+              <li><span>Frameworks/Databases:</span><br>RESTAssured, Flask, Django, MySQL, PostGreSQL, Redis, SparkSQL</li>
+              <li><span>Cloud Technologies/Others:</span><br>AWS (EC2, S3) , Bitbucket, Git, Kafka, Kibana, Postman, Jenkins, Agile, MapReduce, Spark, Docker</li>
+            </ul>
+          </div>
+          <div class="contents" id="experience">
+            <ul>
+              <li><span>Jul 2020 - May 2022</span><br>Software Engineer at Paytm</li>
+              <li><span>Jan 2020 - May 2020</span><br>Data Analyst Intern at Betmount</li>
+              <li><span>Aug 2019 - Dec 2019</span><br>Assistant Systems Engineer at Tata Consultancy Services</li>
+            </ul>
+          </div>
+          <div class="contents" id="education">
+            <ul>
+              <li><span>2022 - 2024</span><br>Masters of Computer Science from UMASS Amherst</li>
+              <li><span>2015 - 2019</span><br>Bachelors of Computer Engineering from Mumbai University</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- experiences -->
+  <div id="experiences">
+    <div class="container">
+      <h1 class="subtitle">My Experience</h1>
+      <div class="experience-list">
+        <div>
+          <i class="fa-solid fa-code"></i>
+          <h2>Software Engineer | Paytm</h2>
+          <p>Designing APIs, creating distributed systems, working on huge in-flow of data</p>
+          <a onclick="openModal('modal-1')">Learn More</a>
+        </div>
+        <div>
+          <i class="fa-solid fa-database"></i>
+          <h2>Data Analyst Intern | Betmount</h2>
+          <p>Collecting, cleaning and analysing data</p>
+          <a onclick="openModal('modal-2')">Learn More</a>
+        </div>
+        
+        <div>
+          <i class="fa-brands fa-codepen"></i>
+          <h2>Assistant Systems Engineer | TCS</h2>
+          <p>Developing and supporting client's application</p>
+          <a onclick="openModal('modal-3')">Learn More</a>
+        </div>
+
+        
+      </div>
+    </div>
+  </div>
+
+  <div class="modal-1" id="modal-1">
+    <div class="modal-header">
+        <div class="title">Software Engineer | Paytm | Jul 2020 to May 2022</div>
+        <i class="fa-sharp fa-regular fa-circle-xmark" onclick="closeModal('modal-1')"></i>
+    </div>
+    <div class="modal-body">
+      Contributed to various improvements in the chat system of a company, including the creation of a low-latency, high-throughput distributed system and automated data cleaning. Spearheaded API integrations resulting in increased customer satisfaction and developed an API automation framework, reducing manual testing. Additionally, led daily sync-ups and mentored new employees in Automation Testing.
+    </div>
+  </div>
+
+  <div class="modal-2" id="modal-2">
+    <div class="modal-header">
+        <div class="title">Data Analyst Intern | Betmount | Jan 2020 to May 2020</div>
+        <i class="fa-sharp fa-regular fa-circle-xmark" onclick="closeModal('modal-2')"></i>
+    </div>
+    <div class="modal-body">
+      Interacted closely with founding members of the company and extrapolated user engagement data to perform analysis and provided insights to augment user engagement by ~ 40 %.
+    </div>
+  </div>
+
+  <div class="modal-3" id="modal-3">
+    <div class="modal-header">
+        <div class="title">Assistant System Engineer | TCS | Aug 2019 to Dec 2019</div>
+        <i class="fa-sharp fa-regular fa-circle-xmark" onclick="closeModal('modal-3')"></i>
+    </div>
+    <div class="modal-body">
+      Worked closely with other developers, business and system analysts, and was part of Microsoft Business Unit to research, understand and manage the existing software used by the client to provide support to the client's system.
+    </div>
+  </div>
+
+
+  <div id="overlay" ></div>
+
+  <!-- protfolio -->
+  <div id="portfolio">
+    <div class="container">
+      <h1 class="subtitle">My Projects</h1>
+        <div class="project-list">
+          <div class="project">
+            <img src="images/work_1.png" alt="work_1">
+            <div class="layer">
+              <h3>Annadatta</h3>
+              <p>A solution to minimise the agrarian crisis in India.</p>
+              <!-- <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a> -->
+            </div>
+          </div>
+          <div class="project">
+            <img src="images/work_2.png" alt="work_2">
+            <div class="layer">
+              <h3>FiresOnFire</h3>
+              <p>Freelancing project for a start-up landing page.</p>
+              <!-- <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a> -->
+            </div>
+          </div>
+          <div class="project">
+            <img src="images/work_3.png" alt="work_3">
+            <div class="layer">
+              <h3>YogiPrint</h3>
+              <p>Developed and shipped a Website for YogiPrint.</p>
+              <!-- <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a> -->
+            </div>
+          </div>
+        </div>
+        <a href="#" class="btn">See More</a>
+    </div>
+  </div>
+
+  <div id="contact">
+    <div class="container">
+      <div class="row">
+        <div class="contact-left">
+          <h1 class="subtitle">Contact Me</h1>
+          <p><a href="maitto:mitaleeminde@gmail.com"><i class="fa-solid fa-envelope"></a></i>mitaleeminde@gmail.com</p>
+          <div class="social-icons">
+            <a href="https://www.linkedin.com/in/mitalee-minde/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+            <a href="https://github.com/mitalee18/" target="_blank"><i class="fa-brands fa-github"></i></a>
+          </div>
+          <a href="images/resume.pdf" download class="btn btn2">Download Resume</a>
+        </div>
+        <div class="contact-right">
+          <form name="submit-to-google-sheet">
+            <input type="text" name="Name" placeholder="Your Name" required>
+            <input type="email" name="Email" placeholder="Your Email" required>
+            <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+            <button type="submit" class="btn btn2">Submit</button>
+          </form>
+          <span id="message"></span>
+        </div>
+      </div>
+    </div>
+    <!-- <div class="copyright">
+      <p>Copyright | Easy Tutorials</p>
+    </div> -->
+  </div>
+
+  <script>
+    var tablinks = document.getElementsByClassName("tab-links");
+    var tabcontents = document.getElementsByClassName("contents");
+
+    function opentab(tabname){
+      for(tablink of tablinks){
+        tablink.classList.remove("activelink");
+      }
+
+      for(tabcontent of tabcontents){
+        tabcontent.classList.remove("activetab");
+      }
+
+      event.currentTarget.classList.add("activelink");
+      document.getElementById(tabname).classList.add("activetab");
+    }
+
+    var sidemenu = document.getElementById("sidemenu")
+
+    function openMenu(){
+      sidemenu.style.right = "0"
+    }
+
+    function closeMenu(){
+      sidemenu.style.right = "-200px"
+    }
+
+  </script>
+
+<script>
+  const scriptURL = 'https://script.google.com/macros/s/AKfycbxaUSYANmctjd30D5m-xb169p6516cUrEpXepPKz__QBJTSpaJQA601NLqVzXJ51ogYpw/exec'
+  const form = document.forms['submit-to-google-sheet']
+  const msg = document.getElementById("message")
+
+  form.addEventListener('submit', e => {
+    e.preventDefault()
+    fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+      .then(response => {
+        msg.innerHTML = "Message sent successfully"
+        setTimeout(function(){
+          msg.innerHTML = ""
+        }, 5000)
+        form.reset()
+      })
+      .catch(error => console.error('Error!', error.message))
+  })
+</script>
+
+<script>
+  function openModal(id){
+    document.getElementById(String(id)).classList.add('active');
+    document.getElementById("overlay").classList.add('active');
+  }
+
+  function closeModal(id){
+    document.getElementById(String(id)).classList.remove('active');
+    document.getElementById("overlay").classList.remove('active');
+  }
+</script>
+  
 </body>
 </html>
