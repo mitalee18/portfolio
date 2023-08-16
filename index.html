@@ -47,14 +47,16 @@
           </div>
           <div class="contents activetab" id="skills">
             <ul>
-              <li><span>Languages/Web Technologies:</span><br>Designing APIs, creating distributed systems, working on huge in-flow of data</li>
-              <li><span>Machine Learning Tools/Libraries:</span><br> Numpy, MatplotLib, Pandas, Sklearn, Seaborn</li>
-              <li><span>Frameworks/Databases:</span><br>RESTAssured, Flask, Django, MySQL, PostGreSQL, Redis, SparkSQL</li>
-              <li><span>Cloud Technologies/Others:</span><br>AWS (EC2, S3) , Bitbucket, Git, Kafka, Kibana, Postman, Jenkins, Agile, MapReduce, Spark, Docker</li>
+              <li><span>Programming Languages:</span><br>Python, Java, Gherkin, Javascript, Typescript PHP, HTML, CSS, Shell Scripting</li>
+              <li><span>Frameworks:</span><br>RESTAssured, Flask, Django, Angular, REST Apis, Karma, Jest, Jasmine</li>
+              <li><span>Databases:</span><br>MySQL, PostGreSQL, Redis, SparkSQL, Elasticsearch</li>
+              <li><span>CI/CD Tools:</span><br>Jenkins, Git, Bitbucket, JIRA, Confluence, Agile</li>
+              <li><span>Cloud Technologies/Others:</span><br>AWS, Kafka, Kibana, Postman, MapReduce, Spark, Docker</li>
             </ul>
           </div>
           <div class="contents" id="experience">
             <ul>
+              <li><span>Jun 2023 - Aug 2023</span><br>Software Engineer Intern at Advisor360</li>
               <li><span>Jul 2020 - May 2022</span><br>Software Engineer at Paytm</li>
               <li><span>Jan 2020 - May 2020</span><br>Data Analyst Intern at Betmount</li>
               <li><span>Aug 2019 - Dec 2019</span><br>Assistant Systems Engineer at Tata Consultancy Services</li>
@@ -78,22 +80,28 @@
       <div class="experience-list">
         <div>
           <i class="fa-solid fa-code"></i>
+          <h2>Software Engineer Intern | Advisor360</h2>
+          <p>Working on developing intern "Smart Search" tool for searching angular components within repositories</p>
+          <a onclick="openModal('modal-1')">Learn More</a>
+        </div>
+        <div>
+          <i class="fa-solid fa-code"></i>
           <h2>Software Engineer | Paytm</h2>
           <p>Designing APIs, creating distributed systems, working on huge in-flow of data</p>
-          <a onclick="openModal('modal-1')">Learn More</a>
+          <a onclick="openModal('modal-2')">Learn More</a>
         </div>
         <div>
           <i class="fa-solid fa-database"></i>
           <h2>Data Analyst Intern | Betmount</h2>
           <p>Collecting, cleaning and analysing data</p>
-          <a onclick="openModal('modal-2')">Learn More</a>
+          <a onclick="openModal('modal-3')">Learn More</a>
         </div>
         
         <div>
           <i class="fa-brands fa-codepen"></i>
           <h2>Assistant Systems Engineer | TCS</h2>
           <p>Developing and supporting client's application</p>
-          <a onclick="openModal('modal-3')">Learn More</a>
+          <a onclick="openModal('modal-4')">Learn More</a>
         </div>
 
         
@@ -103,31 +111,69 @@
 
   <div class="modal-1" id="modal-1">
     <div class="modal-header">
+        <div class="title">Software Engineer Intern | Advisor360 | Jun 2023 to Aug 2023</div>
+        <i class="fa-sharp fa-regular fa-circle-xmark" onclick="closeModal('modal-1')"></i>
+    </div>
+    <div class="modal-body">
+      <ul>
+        <li>
+          Developed a tool for facilitating smart search of Angular components within a repository (with options to filter by file type, export to excel) resulting in an 80% reduction in developer and product communication time and increased independence.
+        </li>
+        <li>
+          Revamped custom Angular components (button, text editor) to be used by different teams within the Advisor360 ecosystem.
+        </li>
+        <li>
+          Enhanced product quality by resolving client-reported bugs, implementing requested feature changes, ensuring a smooth user experience and meeting client requirements. 
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="modal-1" id="modal-2">
+    <div class="modal-header">
         <div class="title">Software Engineer | Paytm | Jul 2020 to May 2022</div>
         <i class="fa-sharp fa-regular fa-circle-xmark" onclick="closeModal('modal-1')"></i>
     </div>
     <div class="modal-body">
-      Contributed to various improvements in the chat system of a company, including the creation of a low-latency, high-throughput distributed system and automated data cleaning. Spearheaded API integrations resulting in increased customer satisfaction and developed an API automation framework, reducing manual testing. Additionally, led daily sync-ups and mentored new employees in Automation Testing.
+      <ul>
+        <li>Contributed to the end-to-end creation of the revamped chat architecture and APIs (including user creation, chat channel creation, message sending, announcement messaging, and push notifications) to improve app performance by ~40%.
+        </li>
+        <li>
+          Built a low-latency, high-throughput, event-based distributed system supporting 100M payment messages per day using Kafka.
+        </li>
+        <li>
+Spearheaded the integration of Paytm-Chat APIs with multiple parallel teams, including Paytm for Business and Paytm Money, resulting in an increase of ~30% in customer acquisition.
+        </li>
+        <li>
+          Developed automated data cleaning, updating, and log analysis using Python libraries, which reduced manual effort by ~60%.
+        </li>
+        <li>
+          Automated chat-channel creation using Python during IPL matches, eliminating 100% of manual effort.
+        </li>
+        <li>
+          Designed and implemented an API automation framework which reduced manual testing by ~70%. 
+        </li>
+      </ul>
     </div>
   </div>
 
-  <div class="modal-2" id="modal-2">
+  <div class="modal-2" id="modal-3">
     <div class="modal-header">
         <div class="title">Data Analyst Intern | Betmount | Jan 2020 to May 2020</div>
         <i class="fa-sharp fa-regular fa-circle-xmark" onclick="closeModal('modal-2')"></i>
     </div>
     <div class="modal-body">
-      Interacted closely with founding members of the company and extrapolated user engagement data to perform analysis and provided insights to augment user engagement by ~ 40 %.
+      Performed data analysis by extrapolating user engagement data and provided insights to increase user engagement by ~ 40 %.
     </div>
   </div>
 
-  <div class="modal-3" id="modal-3">
+  <div class="modal-3" id="modal-4">
     <div class="modal-header">
         <div class="title">Assistant System Engineer | TCS | Aug 2019 to Dec 2019</div>
         <i class="fa-sharp fa-regular fa-circle-xmark" onclick="closeModal('modal-3')"></i>
     </div>
     <div class="modal-body">
-      Worked closely with other developers, business and system analysts, and was part of Microsoft Business Unit to research, understand and manage the existing software used by the client to provide support to the client's system.
+      Resolved Biztalk application bugs and provided support to clients software improving the product’s performance.
     </div>
   </div>
 
